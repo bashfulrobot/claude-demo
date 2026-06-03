@@ -19,6 +19,9 @@ Builds the docs site exactly the way CI does and opens your skill's catalog page
 
 Optional, but it's the fastest way to catch a confusing description before reviewers do. It runs the same `--strict` build CI uses, so clearing it here means CI clears too.
 
+!!! note "First run takes a minute"
+    The very first preview builds a small Python environment and installs the docs tooling before it renders. It looks like it's hanging; it isn't. Later runs are fast.
+
 !!! warning "If the build fails"
     The command runs the build under `--strict`, which fails on warnings, so it will sometimes report errors instead of opening a page. Two common cases:
 
