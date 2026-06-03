@@ -11,12 +11,15 @@ The marketplace lives in the **Kong/kong-skills** repo, and the docs site is pri
 
 Open [github.com](https://github.com) in your browser and sign in. Browser login matters here, not just the CLI.
 
-## 2. Authorise Kong SSO
+## 2. Authorise the GitHub CLI for Kong SSO
 
-Without this, `git clone` and `git push` against the Kong org are rejected.
+You logged in over **HTTPS** with `gh auth login` during setup, so access runs through the GitHub CLI's token — not an SSH key. That token has to be SSO-authorized for the **Kong** org, or `git clone` and `git push` against Kong repos are rejected.
 
-- Go to [github.com/settings/keys](https://github.com/settings/keys)
-- Find the key you use for GitHub, click **Configure SSO**, and **Authorize** it for the **Kong** organization.
+- Most of the time the `gh auth login` browser flow already prompted you to **Authorize** for the Kong organization. If you clicked through it, you're done.
+- If you're not sure, go to [github.com/settings/connections/applications](https://github.com/settings/connections/applications), open **GitHub CLI**, and under **Organization access** make sure **Kong** shows a green check (click **Authorize** / **Grant** if it doesn't).
+
+!!! info "You also need to be in the Kong org"
+    SSO authorization only works if you're already a member of the **Kong** GitHub organization. If you're not, ask the instructor to add you before going further.
 
 !!! check "Quick test"
     Once authorised, this site should open without a login wall:
