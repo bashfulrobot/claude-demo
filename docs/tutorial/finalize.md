@@ -15,7 +15,7 @@ Run it without `--write` first to see what it proposes, then add `--write` to ap
 
 !!! example "Example"
     ```text
-    /kong-skill-finalize plugins/deck-config-review --write
+    /kong-skill-finalize plugins/success-plan --write
     ```
     A pure draft-text skill adds little. If yours called `gh`, finalize would propose adding `gh` to `requirements` and mark the platforms and surfaces it runs on.
 

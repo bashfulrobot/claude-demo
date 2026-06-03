@@ -13,9 +13,9 @@ Builds the docs site exactly the way CI does and opens your skill's catalog page
 
 !!! example "Example"
     ```text
-    /kong-skill-test deck-config-review
+    /kong-skill-test success-plan
     ```
-    opens the catalog page for `deck-config-review`. If the one-line description doesn't make the trigger and output obvious at a glance, tighten it in `SKILL.md` and re-run.
+    opens the catalog page for `success-plan`. If the one-line description doesn't make the trigger and output obvious at a glance, tighten it in `SKILL.md` and re-run.
 
 Optional, but it's the fastest way to catch a confusing description before reviewers do.
 

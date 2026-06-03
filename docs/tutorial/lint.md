@@ -16,7 +16,7 @@ Static checks: em-dashes (banned repo-wide), GNU-only shell flags, frontmatter, 
 
 !!! example "A finding looks like"
     ```text
-    plugins/deck-config-review/skills/deck-config-review/SKILL.md
+    plugins/success-plan/skills/success-plan/SKILL.md
       line 14: em-dash found, replace with a comma or period
     ```
 

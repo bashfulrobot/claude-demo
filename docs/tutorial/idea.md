@@ -7,39 +7,11 @@ hide:
 
 Decide what your skill *does* in one sentence before you scaffold. Keep it narrow: one trigger, one job, one named output.
 
-The best skill is something you already do by hand, over and over. Think about the documents and deliverables you produce on repeat: success plans, QBR outlines, onboarding checklists, renewal-risk summaries, call recaps. A skill that drafts one of those for you is a great first build.
+The best skill is something you already do by hand, over and over. Think about the documents and deliverables you produce on repeat: success plans, QBR outlines, onboarding checklists, renewal-risk summaries, call recaps. Pick the one you'd happily never format by hand again. That's your skill.
 
-## A worked sample
+!!! tip "Don't aim for marketplace-perfect"
+    Don't worry about whether your idea is "good enough" to publish. Today is about learning to build and contribute a skill end to end, not about shipping a must-have. Pick something small and concrete. We can delete the PR afterward and never publish it; the point is that the whole path feels familiar the day a real need shows up.
 
-Skills are great at turning reference material plus your inputs into a consistent document. Here's a prompt that defines one which drafts a customer success plan from a few best-practice articles, then asks you for anything it still needs:
-
-```text
-Using these three articles, define a skill that drafts a customer success plan
-following the tips and best practices they outline. The skill should prompt me
-for any recommended inputs I haven't already provided before it drafts. Then
-have it account for the key GEP metrics Kong tracks: <metric 1>, <metric 2>,
-<metric 3>.
-
-https://www.everafter.ai/blog/crafting-customer-success-plans-that-drive-action
-https://www.custify.com/blog/elements-customer-success-plan/
-https://www.dock.us/library/customer-success-plan
-```
-
-Swap `<metric 1>`, `<metric 2>`, `<metric 3>` for the GEP metrics you actually report on.
-
-Same shape works for plenty of other CS deliverables:
-
-```text
-Define a skill that turns my raw account notes into a quarterly business review
-outline: wins, open risks, adoption trends, and goals for next quarter. Have it
-ask me for anything missing (renewal date, key stakeholders, current health
-score) before it drafts.
-```
-
-## Pick your own, though
-
-Don't just run one of the samples above. The skill sticks when it automates something *you* keep doing. Think about the document or task you produce most often: the one you'd happily never format by hand again. That's your skill.
-
-Got it in a sentence? Good.
+Got it in a sentence? Good. You'll turn it into a working draft on the next couple of pages.
 
 Next: [Design principles](design.md)

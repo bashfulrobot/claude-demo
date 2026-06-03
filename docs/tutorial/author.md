@@ -13,23 +13,40 @@ This loads Kong's conventions into context, then hands off to `skill-creator` to
 
 ## Give it a strong brief
 
-When it asks what your skill does, don't wing it. Paste a structured brief. This one prompt is the difference between a near-mergeable first draft and three rounds of rework. Below it's filled in with the `deck-config-review` sample. **Replace every line with your own skill's details**, and fill in the angle brackets:
+When it asks what your skill does, don't wing it. Paste a structured brief. This one prompt is the difference between a near-mergeable first draft and three rounds of rework. Below it's filled in with a `success-plan` sample. **Replace every line with your own skill's details**, and fill in the angle brackets:
 
 ```text
 Here's the skill I want to build:
-- Name: <deck-config-review>
-- Trigger: when I paste a decK config export and say "review this"
-- Input: the decK YAML
-- Job: flag risky or non-best-practice settings and explain each briefly
-- Output: a short, prioritized findings list, nothing else
-- Tools: <none, analyze the pasted config> OR <name the exact tool: deck, gh, an MCP>
-- Auth: <none> OR <requires `gh auth login` or `sf org login`; add a pre-flight check>
-- Guardrails: only flag what's actually in the config, don't invent settings, don't rewrite the file
+- Name: <success-plan>
+- Trigger: when I say "draft a success plan" and give the account context
+- Input: the account details I paste (goals, stakeholders, timeline, current state)
+- Job: draft a customer success plan that follows established best practices
+- Output: one structured success-plan document, nothing else
+- Tools: <none, just draft text> OR <name the exact tool if one applies>
+- Auth: <none> OR <requires a login; add a pre-flight check>
+- Guardrails: prompt me for any recommended input I haven't provided before drafting; don't invent numbers; follow the structure, don't pad it
 
 Draft the SKILL.md in imperative voice. Ask me about anything unclear before you write.
 ```
 
 That brief is just the [design principles](design.md) plus the good-prompt basics (context, a named output, and guardrails) written down.
+
+!!! example "Building a document skill from reference material"
+    When your skill should follow an established format, point `skill-creator` straight at the source articles and let it bake the best practices into the `SKILL.md`:
+
+    ```text
+    Using these three articles, define a skill that drafts a customer success
+    plan following the tips and best practices they outline. The skill should
+    prompt me for any recommended inputs I haven't already provided before it
+    drafts. Then have it account for the key GEP metrics Kong tracks:
+    <metric 1>, <metric 2>, <metric 3>.
+
+    https://www.everafter.ai/blog/crafting-customer-success-plans-that-drive-action
+    https://www.custify.com/blog/elements-customer-success-plan/
+    https://www.dock.us/library/customer-success-plan
+    ```
+
+    Swap `<metric 1>`, `<metric 2>`, `<metric 3>` for the GEP metrics you report on.
 
 !!! tip "While it drafts, hold it to these"
     - **Imperative voice.** "Read the file, extract the headings, write a summary": instructions, not "this skill summarizes files."
