@@ -14,6 +14,22 @@ One time per machine. In **any** Claude Code session, run:
 
 That installs every `/kong-skill-*` verb you'll use: `init`, `author`, `finalize`, `lint`, `test`, `open-pr`, `watch-checks`.
 
+!!! warning "One required co-install"
+    `/kong-skill-author` hands the actual drafting off to Anthropic's **skill-creator** plugin. It's a *separate* plugin — `kong-skill` doesn't bundle it — so install it now or `author` will fail at the hand-off:
+
+    ```text
+    /plugin install skill-creator@claude-plugins-official
+    ```
+
+    If that marketplace isn't registered yet, add it first with `/plugin marketplace add anthropics/claude-code`.
+
+!!! tip "Optional: the commit helper"
+    The [Ship it](ship.md) step uses `/commit:commit` for a clean Conventional Commit. It's another separate plugin — install it if you want it, or just use plain `git commit`:
+
+    ```text
+    /plugin install commit@kong-skills
+    ```
+
 You also need a small toolchain. You already have **git** and **gh** from the setup guide; add the rest if they're missing:
 
 - **Python ≥ 3.10** — usually already installed (`python3 --version`)

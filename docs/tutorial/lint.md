@@ -14,6 +14,12 @@ Static checks: em-dashes (banned repo-wide), GNU-only shell flags, frontmatter, 
 !!! tip "Most common failure"
     Em-dashes. If it flags one, replace it with a comma or a period and run again.
 
+!!! example "A finding looks like"
+    ```text
+    plugins/deck-config-review/skills/deck-config-review/SKILL.md
+      line 14: em-dash found, replace with a comma or period
+    ```
+
 Fix what it reports, then re-run until it's clean.
 
 Next: [Preview](preview.md)

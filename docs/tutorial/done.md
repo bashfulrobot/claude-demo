@@ -15,6 +15,8 @@ Your PR is open with the quality-bar checklist filled in. From here:
 /plugin install <skill-name>@kong-skills
 ```
 
+For the running example that's `/plugin install deck-config-review@kong-skills`.
+
 That's a skill, built and shipped. 🎉
 
 Questions or bugs: [github.com/Kong/kong-skills/issues](https://github.com/Kong/kong-skills/issues)
