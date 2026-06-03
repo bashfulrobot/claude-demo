@@ -16,6 +16,9 @@ This loads Kong's conventions into context, then hands off to `skill-creator` to
 !!! tip "Keep the prompting cheatsheet open"
     The brief is a prompt, and the [prompting tips and tricks](prompting.md) page is worth referencing while you write it. Ctrl+click (Cmd+click on macOS) the link to open it in a new tab so you can keep it beside this one.
 
+!!! tip "Draft it in a text editor first"
+    Don't compose the brief live in the terminal. Write it in a text editor (VS Code, Notepad, whatever you like), think it through, and revise it before you paste. A prompt you've read back and tightened once or twice beats one typed on the spot, and you keep a copy to reuse or tweak later.
+
 When it asks what your skill does, don't wing it. Paste a structured brief. This one prompt is the difference between a near-mergeable first draft and three rounds of rework. Below it's filled in with a `success-plan` sample. **Replace every line with your own skill's details**, and fill in the angle brackets:
 
 ```text
