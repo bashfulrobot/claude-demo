@@ -1,56 +1,39 @@
 # claude-demo
 
-Setup scripts for the **Claude Code Skills** workshop. They install the tools you
-need and then walk you through logging in.
+Setup for the **Claude Code Skills** workshop. Pick your platform and follow the
+copy/paste guide — every step has a version check, so skip anything you already have.
 
-**Installs:** git, GitHub CLI (`gh`), Homebrew (macOS only), and Claude Code.
-**Then guides you through:** `gh auth login` and Claude Code `/login`.
+## Setup guides
 
-## Use
+- **macOS** → [macos.md](macos.md)
+- **Ubuntu / Debian** → [ubuntu.md](ubuntu.md)
 
-You don't have `git` yet — that's what these scripts install — so download the
-script directly with `curl` (built into macOS and Ubuntu).
+Each guide installs git, GitHub CLI (`gh`), and Claude Code (plus Homebrew on
+macOS), sets sensible git config, and walks you through `gh` and Claude Code login.
 
-**macOS**
+## Prefer one command?
+
+One-shot scripts that run the installs and print the login steps. `curl` is
+built in, so you don't need git yet:
 
 ```bash
+# macOS
 curl -fsSLO https://raw.githubusercontent.com/bashfulrobot/claude-demo/main/install-mac.sh
-chmod +x install-mac.sh
-./install-mac.sh
-```
+chmod +x install-mac.sh && ./install-mac.sh
 
-**Ubuntu / Debian**
-
-```bash
+# Ubuntu / Debian
 curl -fsSLO https://raw.githubusercontent.com/bashfulrobot/claude-demo/main/install-ubuntu.sh
-chmod +x install-ubuntu.sh
-./install-ubuntu.sh
+chmod +x install-ubuntu.sh && ./install-ubuntu.sh
 ```
 
-Each script is safe to re-run — anything already installed is skipped. It will
-also offer to create a working folder at `~/kong-dev`.
+## Supplemental docs
 
-Already have `git`? You can clone the whole repo instead:
+<!-- Add workshop-specific guides here as we write them. -->
 
-```bash
-git clone https://github.com/bashfulrobot/claude-demo.git && cd claude-demo
-chmod +x install-mac.sh install-ubuntu.sh
-```
+- _(coming soon)_
 
-## Logins (handled at the end of each script)
+External references:
 
-**GitHub CLI**
-
-```bash
-gh auth login
-# choose: GitHub.com  ->  HTTPS  ->  Login with a web browser
-```
-
-**Claude Code**
-
-```bash
-cd ~/kong-dev
-claude        # start Claude Code
-/login        # type this inside Claude, choose the subscription option
-              # a browser opens to authenticate; Ctrl-D twice to exit
-```
+- [Claude Code docs](https://code.claude.com/docs/en/overview)
+- [GitHub CLI manual](https://cli.github.com/manual/)
+- [Homebrew](https://brew.sh/)
