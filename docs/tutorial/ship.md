@@ -13,7 +13,7 @@ Three commands take you from "done editing" to "PR open."
 /commit:commit
 ```
 
-A Conventional Commit, signed, no AI attribution. Don't have the commit plugin (it's the optional co-install from [Install](install.md))? A plain `git commit -m "feat(<skill-name>): ..."` works just as well.
+A Conventional Commit, signed, no AI attribution. You installed this plugin on the [Install](install.md) page; if you skipped it, a plain `git commit -m "feat(<skill-name>): ..."` works just as well.
 
 ## Open the PR
 

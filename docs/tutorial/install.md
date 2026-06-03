@@ -9,26 +9,20 @@ One time per machine. In **any** Claude Code session, run:
 
 ```text
 /plugin marketplace add Kong/kong-skills
+/plugin marketplace add anthropics/claude-code
 /plugin install kong-skill@kong-skills
+/plugin install commit@kong-skills
+/plugin install skill-creator@claude-plugins-official
 ```
 
-That installs every `/kong-skill-*` verb you'll use: `init`, `author`, `finalize`, `lint`, `test`, `open-pr`, `watch-checks`.
+Those three plugins are the full toolset this tutorial uses:
 
-!!! warning "One required co-install"
-    `/kong-skill-author` hands the actual drafting off to Anthropic's **skill-creator** plugin. It's a *separate* plugin — `kong-skill` doesn't bundle it — so install it now or `author` will fail at the hand-off:
+- **`kong-skill`** — every `/kong-skill-*` verb: `init`, `author`, `finalize`, `lint`, `test`, `open-pr`, `watch-checks`.
+- **`skill-creator`** — Anthropic's drafting plugin. `/kong-skill-author` hands the actual `SKILL.md` writing off to it, so `author` fails at the hand-off without it.
+- **`commit`** — the `/commit:commit` helper the [Ship it](ship.md) step uses for a clean, signed Conventional Commit.
 
-    ```text
-    /plugin install skill-creator@claude-plugins-official
-    ```
-
-    If that marketplace isn't registered yet, add it first with `/plugin marketplace add anthropics/claude-code`.
-
-!!! tip "Optional: the commit helper"
-    The [Ship it](ship.md) step uses `/commit:commit` for a clean Conventional Commit. It's another separate plugin — install it if you want it, or just use plain `git commit`:
-
-    ```text
-    /plugin install commit@kong-skills
-    ```
+!!! note "Why three separate installs"
+    `kong-skill` doesn't bundle the other two — they're independent plugins (skill-creator is Anthropic's, from the `claude-plugins-official` marketplace). Installing all three now means every step of the tutorial just works.
 
 You also need a small toolchain. You already have **git** and **gh** from the setup guide; add the rest if they're missing:
 
