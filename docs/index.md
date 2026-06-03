@@ -11,7 +11,7 @@ Everything you need installed and logged in before the workshop. Work top to bot
 - **git config** — your identity and a few sensible defaults
 - **Logins** — GitHub and Claude Code
 
-!!! tip "In a hurry?"
-    Each page shows commands in **macOS** and **Ubuntu / Debian** tabs — pick yours. Prefer one command? See the one-shot scripts on [Next steps](next-steps.md).
+!!! tip
+    Each page shows commands in **macOS** and **Ubuntu / Debian** tabs — pick yours.
 
 Start with [Homebrew](homebrew.md) (macOS) or jump to [git](git.md) on Ubuntu.
