@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Configure git
 
 Set your identity (required) and a few sensible defaults.

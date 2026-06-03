@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # GitHub CLI (gh)
 
 Talk to GitHub from the terminal — create repos, open PRs, authenticate git.

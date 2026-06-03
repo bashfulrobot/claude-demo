@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Logins
 
 Two logins to finish setup.

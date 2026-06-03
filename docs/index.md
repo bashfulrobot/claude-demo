@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Claude Code workshop — setup
 
 Everything you need installed and logged in before the workshop. Work top to bottom; each page has a **version check** at the top — if it already prints a version, skip that page.

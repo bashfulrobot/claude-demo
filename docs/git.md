@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # git
 
 Version control — and a dependency for almost everything else.

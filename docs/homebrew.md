@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Homebrew
 
 !!! note "macOS only"

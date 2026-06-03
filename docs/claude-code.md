@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Claude Code
 
 The agent you'll use to build skills.

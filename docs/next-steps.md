@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Next steps
 
 You're set up. A few extras.
