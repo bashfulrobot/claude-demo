@@ -20,3 +20,5 @@ Everything you need installed and logged in before the workshop. Work top to bot
     Each page shows commands in **macOS** and **Ubuntu / Debian** tabs — pick yours.
 
 Start with [Homebrew](homebrew.md) (macOS) or jump to [git](git.md) on Ubuntu.
+
+Already set up? Go straight to **[Build a skill](tutorial/index.md)**.

@@ -1,0 +1,14 @@
+title: Build a skill
+nav:
+  - index.md
+  - access.md
+  - install.md
+  - clone.md
+  - idea.md
+  - init.md
+  - author.md
+  - finalize.md
+  - lint.md
+  - preview.md
+  - ship.md
+  - done.md

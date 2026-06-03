@@ -20,3 +20,7 @@ mkdir -p ~/kong-dev
 - [Claude Code docs](https://code.claude.com/docs/en/overview)
 - [GitHub CLI manual](https://cli.github.com/manual/)
 - [Homebrew](https://brew.sh/)
+
+## Ready to build a skill?
+
+Setup done. Now [build and contribute your own skill →](tutorial/index.md).
