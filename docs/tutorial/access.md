@@ -13,7 +13,7 @@ Open [github.com](https://github.com) in your browser and sign in. Browser login
 
 ## 2. Authorise the GitHub CLI for Kong SSO
 
-You logged in over **HTTPS** with `gh auth login` during setup, so access runs through the GitHub CLI's token — not an SSH key. That token has to be SSO-authorized for the **Kong** org, or `git clone` and `git push` against Kong repos are rejected.
+You logged in over **HTTPS** with `gh auth login` during setup, so access runs through the GitHub CLI's token, not an SSH key. That token has to be SSO-authorized for the **Kong** org, or `git clone` and `git push` against Kong repos are rejected.
 
 - Most of the time the `gh auth login` browser flow already prompted you to **Authorize** for the Kong organization. If you clicked through it, you're done.
 - If you're not sure, go to [github.com/settings/connections/applications](https://github.com/settings/connections/applications), open **GitHub CLI**, and under **Organization access** make sure **Kong** shows a green check (click **Authorize** / **Grant** if it doesn't).

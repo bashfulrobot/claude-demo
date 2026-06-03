@@ -14,7 +14,7 @@ In your Claude Code session at the repo root:
 Use a short, hyphenated name for the job. In one shot this creates the plugin folder, a draft `plugin.json` and `SKILL.md`, registers the skill in the marketplace catalog, and wires up dependencies.
 
 !!! info "`deck-config-review` is just a sample"
-    From here on, the examples follow one made-up skill, `deck-config-review`, so the commands stay concrete. You're building **your own** skill — the one you picked on the [last page](idea.md). Swap your skill's name in everywhere you see `deck-config-review`.
+    From here on, the examples follow one made-up skill, `deck-config-review`, so the commands stay concrete. You're building **your own** skill, the one you picked on the [last page](idea.md). Swap your skill's name in everywhere you see `deck-config-review`.
 
 !!! example "Example"
     ```text

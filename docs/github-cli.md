@@ -5,7 +5,7 @@ hide:
 
 # GitHub CLI (gh)
 
-Talk to GitHub from the terminal — create repos, open PRs, authenticate git.
+Talk to GitHub from the terminal: create repos, open PRs, authenticate git.
 
 **Check** (skip if it prints a version):
 

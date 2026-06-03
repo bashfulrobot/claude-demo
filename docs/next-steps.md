@@ -15,12 +15,12 @@ If you skipped it during login, create a place to work:
 mkdir -p ~/kong-dev
 ```
 
-## You're set up — now wait here
+## You're set up, now wait here
 
-!!! danger "⛔ STOP — do not go any further yet"
+!!! danger "⛔ STOP: do not go any further yet"
     **This is the end of the setup section. Do not start the skill-building tutorial on your own.**
 
-    We go through the build **together, as a group**, so everyone stays on the same step. If you race ahead, you'll be debugging alone while the rest of us are still talking — and you'll miss the context that makes the next part click.
+    We go through the build **together, as a group**, so everyone stays on the same step. If you race ahead, you'll be debugging alone while the rest of us are still talking, and you'll miss the context that makes the next part click.
 
     **What to do right now:**
 
@@ -28,7 +28,7 @@ mkdir -p ~/kong-dev
     2. Leave this page open.
     3. **Wait for the instructor to say "go."**
 
-    When you're told to begin — and **only** then — press the button below.
+    When you're told to begin, and **only** then, press the button below.
 
 <div style="text-align: center; margin: 3rem 0;" markdown>
 

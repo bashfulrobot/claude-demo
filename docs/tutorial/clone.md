@@ -22,6 +22,6 @@ Now start Claude Code from inside the repo:
 claude
 ```
 
-Leave this session open — every step from here runs in it.
+Leave this session open. Every step from here runs in it.
 
 Next: [Pick your skill](idea.md)

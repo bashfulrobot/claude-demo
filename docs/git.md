@@ -5,7 +5,7 @@ hide:
 
 # git
 
-Version control — and a dependency for almost everything else.
+Version control. Almost everything else depends on it.
 
 **Check** (skip if it prints a version):
 

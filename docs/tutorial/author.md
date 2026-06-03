@@ -9,11 +9,11 @@ hide:
 /kong-skill-author
 ```
 
-This loads Kong's conventions into context, then hands off to `skill-creator` to draft your `SKILL.md`. The quality of that draft depends almost entirely on the brief you give it — this is the real work.
+This loads Kong's conventions into context, then hands off to `skill-creator` to draft your `SKILL.md`. The quality of that draft depends almost entirely on the brief you give it. This is the real work.
 
 ## Give it a strong brief
 
-When it asks what your skill does, don't wing it. Paste a structured brief. This one prompt is the difference between a near-mergeable first draft and three rounds of rework. Below it's filled in with the `deck-config-review` sample — **replace every line with your own skill's details**, and fill in the angle brackets:
+When it asks what your skill does, don't wing it. Paste a structured brief. This one prompt is the difference between a near-mergeable first draft and three rounds of rework. Below it's filled in with the `deck-config-review` sample. **Replace every line with your own skill's details**, and fill in the angle brackets:
 
 ```text
 Here's the skill I want to build:
@@ -29,10 +29,10 @@ Here's the skill I want to build:
 Draft the SKILL.md in imperative voice. Ask me about anything unclear before you write.
 ```
 
-That brief is just the [design principles](design.md) plus the good-prompt basics — context, a named output, and guardrails — written down.
+That brief is just the [design principles](design.md) plus the good-prompt basics (context, a named output, and guardrails) written down.
 
 !!! tip "While it drafts, hold it to these"
-    - **Imperative voice.** "Read the file, extract the headings, write a summary" — instructions, not "this skill summarizes files."
+    - **Imperative voice.** "Read the file, extract the headings, write a summary": instructions, not "this skill summarizes files."
     - **Guardrails.** Say what it must NOT do. One sharp guardrail beats ten vague rules.
     - **Name your tools.** If `gh`, `sf`, or an MCP does the job, name it so the model doesn't improvise.
     - **Document auth.** Name the login and add a pre-flight check. The most-skipped step.
@@ -49,6 +49,6 @@ document auth with a pre-flight check; keep one narrow trigger and a single outp
 List what's weak, then rewrite just those parts.
 ```
 
-Don't chase perfect — lint and preview come next.
+Don't chase perfect; lint and preview come next.
 
 Next: [Finalise](finalize.md)

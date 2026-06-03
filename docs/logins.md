@@ -35,6 +35,6 @@ Inside Claude, type:
 /login
 ```
 
-Choose the **subscription** option — a browser opens, authenticate there. When done, press **Ctrl-D twice** to exit Claude.
+Choose the **subscription** option. A browser opens; authenticate there. When done, press **Ctrl-D twice** to exit Claude.
 
 Next: [Next steps](next-steps.md).

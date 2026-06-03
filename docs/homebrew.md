@@ -6,7 +6,7 @@ hide:
 # Homebrew
 
 !!! note "macOS only"
-    Ubuntu / Debian users skip this page — `apt` is already your package manager. Go to [git](git.md).
+    Ubuntu / Debian users skip this page; `apt` is already your package manager. Go to [git](git.md).
 
 The package manager we use to install git and gh on macOS.
 
