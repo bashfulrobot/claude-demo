@@ -8,20 +8,34 @@ need and then walk you through logging in.
 
 ## Use
 
+You don't have `git` yet — that's what these scripts install — so download the
+script directly with `curl` (built into macOS and Ubuntu).
+
+**macOS**
+
 ```bash
-git clone https://github.com/bashfulrobot/claude-demo.git
-cd claude-demo
-chmod +x install-mac.sh install-ubuntu.sh
-
-# macOS
+curl -fsSLO https://raw.githubusercontent.com/bashfulrobot/claude-demo/main/install-mac.sh
+chmod +x install-mac.sh
 ./install-mac.sh
+```
 
-# Ubuntu / Debian
+**Ubuntu / Debian**
+
+```bash
+curl -fsSLO https://raw.githubusercontent.com/bashfulrobot/claude-demo/main/install-ubuntu.sh
+chmod +x install-ubuntu.sh
 ./install-ubuntu.sh
 ```
 
 Each script is safe to re-run — anything already installed is skipped. It will
 also offer to create a working folder at `~/kong-dev`.
+
+Already have `git`? You can clone the whole repo instead:
+
+```bash
+git clone https://github.com/bashfulrobot/claude-demo.git && cd claude-demo
+chmod +x install-mac.sh install-ubuntu.sh
+```
 
 ## Logins (handled at the end of each script)
 
