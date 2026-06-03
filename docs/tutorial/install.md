@@ -19,7 +19,7 @@ Those three plugins are the full toolset this tutorial uses:
 
 - **`kong-skill`** gives you every `/kong-skill-*` verb: `init`, `author`, `finalize`, `lint`, `test`, `open-pr`, `watch-checks`.
 - **`skill-creator`** is Anthropic's drafting plugin. `/kong-skill-author` hands the actual `SKILL.md` writing off to it, so `author` fails at the hand-off without it.
-- **`commit`** provides the `/commit:commit` helper that the [Ship it](ship.md) step uses for a clean, signed Conventional Commit.
+- **`commit`** provides the optional `/commit:commit` helper for a clean Conventional Commit. It signs commits, so it needs GPG or SSH signing set up; if you don't have that, a plain `git commit` works at the [Ship it](ship.md) step.
 
 !!! note "Why three separate installs"
     `kong-skill` doesn't bundle the other two; they're independent plugins (skill-creator is Anthropic's, from the `claude-plugins-official` marketplace). Installing all three now means every step of the tutorial just works.

@@ -8,7 +8,7 @@ hide:
 Your PR is open with the quality-bar checklist filled in. From here:
 
 - The scanners run automatically, and a review is required before merge.
-- A reviewer will comment; address feedback by pushing more commits to the same branch.
+- A reviewer will leave comments. You don't open a new PR to address them: make the change locally, then `git add -A`, `git commit`, and `git push` to the same branch. The PR updates in place and the checks re-run. Repeat until it's approved.
 - Once it merges, your skill shows up in the marketplace catalog and anyone can install it:
 
 ```text
