@@ -13,6 +13,7 @@ Everything you need installed and logged in before the workshop. Work top to bot
 - git for version control
 - the GitHub CLI (`gh`) to talk to GitHub from the terminal
 - Claude Code, the agent you'll build skills with
+- Python 3, which the skill lifecycle commands run on
 - your git config: identity and a few sensible defaults
 - GitHub and Claude Code logins
 

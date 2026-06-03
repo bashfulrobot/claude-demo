@@ -22,4 +22,4 @@ curl -fsSL https://claude.ai/install.sh | bash
 !!! info "Auto-updates"
     The native install keeps itself up to date in the background.
 
-Next: [Configure git](configure-git.md).
+Next: [Build tools](build-tools.md).

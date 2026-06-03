@@ -24,14 +24,7 @@ Those three plugins are the full toolset this tutorial uses:
 !!! note "Why three separate installs"
     `kong-skill` doesn't bundle the other two; they're independent plugins (skill-creator is Anthropic's, from the `claude-plugins-official` marketplace). Installing all three now means every step of the tutorial just works.
 
-You also need **Python 3**. Every `/kong-skill-*` verb is a small Python helper (the commands run `python3 -m scripts.skill_...` under the hood), so without it nothing in the chain runs. You almost certainly already have it:
-
-```bash
-python3 --version
-```
-
-!!! note "Only for the optional Preview step"
-    [just](https://just.systems/) is the one extra tool, and only [Preview](preview.md) (`/kong-skill-test`) uses it: that step runs `just docs-build` to render your catalog page locally. The rest of the chain doesn't touch it. Install it only if you plan to preview: `brew install just` on macOS, or see [just.systems](https://just.systems/) for Ubuntu.
+The machine tools these verbs rely on (Python 3, and `just` for the optional preview) were covered in [Build tools](../build-tools.md) during setup. If you worked through that page, you're ready.
 
 !!! tip "Refresh later"
     `/plugin marketplace update` pulls in new verbs when the team ships them.
