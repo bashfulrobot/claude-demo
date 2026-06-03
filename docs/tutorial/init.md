@@ -13,6 +13,9 @@ In your Claude Code session at the repo root:
 
 Use a short, hyphenated name for the job. In one shot this creates the plugin folder, a draft `plugin.json` and `SKILL.md`, registers the skill in the marketplace catalog, and wires up dependencies.
 
+!!! tip "Name already taken?"
+    If the name collides with an existing folder, init stops and asks. Pick a different, more specific name and run it again. Better a unique name now than a rename later.
+
 !!! info "`success-plan` is just a sample"
     From here on, the examples follow one made-up skill, `success-plan`, so the commands stay concrete. You're building **your own** skill, the one you picked on the [last page](idea.md). Swap your skill's name in everywhere you see `success-plan`.
 
