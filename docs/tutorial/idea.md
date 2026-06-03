@@ -14,8 +14,8 @@ Need a seed? Pick one and make it yours, or invent your own:
 - A list of enabled plugins → a quick security and performance review
 - A support-case thread → a structured escalation summary
 
-!!! warning "Original only"
-    Don't build the same skill as your neighbour. Choose something *you* keep doing by hand.
+!!! tip "Anything works"
+    Pick whatever sounds interesting. It's fine if your neighbour picks something similar; this is practice, not a competition. The seeds above are just starting points.
 
 ## Stuck? Let Claude mine your week
 

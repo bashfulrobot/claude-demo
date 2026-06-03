@@ -218,3 +218,16 @@ button:focus-visible,
 .md-typeset {
   font-size: 0.85rem;
 }
+
+/* Info boxes (admonitions and collapsible details) ship at Material's small
+ * .64rem. Bring them up near body size so the callouts read as easily as the
+ * surrounding copy, title included. */
+.md-typeset .admonition,
+.md-typeset details {
+  font-size: 0.8rem;
+}
+
+.md-typeset .admonition-title,
+.md-typeset summary {
+  font-size: 0.8rem;
+}

@@ -7,8 +7,8 @@ hide:
 
 You're going to build your **own** Claude Code skill and open a pull request to the Kong skills marketplace. This part is hands-on: run a command, see what happens, click **Next**.
 
-!!! warning "Make it original"
-    Everyone builds a *different* skill. Big or small is fine. Pick something only you would find useful. Don't copy the person beside you; reviewers and the PR checks notice duplicates.
+!!! tip "It's about the process, not the product"
+    Pick anything, big or small, whatever sounds fun. It doesn't have to be polished, production-ready, or even work the way you intended. The point is to walk the whole path once, from idea to open PR, so the next time a real need hits you the steps are already familiar. Nothing here has to ship; we can delete the PR afterward.
 
 The `/kong-skill-*` lifecycle commands do the heavy lifting; you steer:
 
