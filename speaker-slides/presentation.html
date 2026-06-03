@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Send in the Clankers: Building Claude Code skills that do the work</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.css" />
+  <link rel="stylesheet" href="kong-reveal-theme/kong.css" />
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- 1. TITLE -->
+      <section class="slide-title" data-no-footer data-background-color="#000000">
+        <img class="slide-title-bg" src="kong-reveal-theme/assets/images/bg-rays-faded.png" alt="" aria-hidden="true" />
+        <img src="assets/clankers.png" alt="Retro robots, the clankers" style="position:absolute; right:0; bottom:56px; width:46%; z-index:1;" />
+        <img class="title-logo" src="kong-reveal-theme/assets/images/kong-wordmark.png" alt="Kong" />
+        <div class="title-content">
+          <p class="product-tag">Customer Success</p>
+          <h1>Send in the <em>Clankers</em></h1>
+          <p class="subtitle">Building Claude Code skills that do the work</p>
+        </div>
+        <div class="meta-bar">
+          <span class="meta-date">JUN 2026</span>
+          <span class="meta-speaker">Dustin Krysak</span>
+        </div>
+        <div class="kong-footer">
+          <img class="footer-mark" src="kong-reveal-theme/assets/images/kong-mark-footer.png" alt="Kong" />
+          <span class="footer-label">AI<br>CONNECTIVITY</span>
+          <span class="footer-copy">© Kong Inc.</span>
+          <span class="footer-right">NOT TO BE SHARED EXTERNALLY</span>
+        </div>
+      </section>
+
+      <!-- 2. AGENDA -->
+      <section class="slide-agenda" data-background-color="#000000">
+        <div class="agenda-left">
+          <span class="section-label">Agenda</span>
+          <h2>The <em>hour</em></h2>
+        </div>
+        <div class="agenda-right">
+          <div class="agenda-item">
+            <span class="agenda-num">1</span>
+            <span class="agenda-title">Prerequisites (10 min)</span>
+          </div>
+          <div class="agenda-item">
+            <span class="agenda-num">2</span>
+            <span class="agenda-title">Introduction to Claude Code, and skills (5 min)</span>
+          </div>
+          <div class="agenda-item">
+            <span class="agenda-num">3</span>
+            <span class="agenda-title">Kong Skills: the marketplace (10 min)</span>
+          </div>
+          <div class="agenda-item">
+            <span class="agenda-num">4</span>
+            <span class="agenda-title">Skill demos (5 min)</span>
+          </div>
+          <div class="agenda-item">
+            <span class="agenda-num">5</span>
+            <span class="agenda-title">Build a skill (30 min)</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. PREREQUISITES -->
+      <section class="slide-content" data-background-color="#000000">
+        <div class="slide-header">
+          <span class="section-label">Prerequisites</span>
+          <h2><em>Prerequisites</em></h2>
+        </div>
+        <div style="max-width:60%;">
+          <div class="kong-step"><span class="kong-step-num">1</span><div class="kong-step-body"><h4>Need</h4><p>git, gh, Homebrew (mac), Claude Code</p></div></div>
+          <div class="kong-step"><span class="kong-step-num">2</span><div class="kong-step-body"><h4>Step-by-step site</h4><p style="font-size:0.66em; font-weight:700;"><span class="kong-highlight">https://bashfulrobot.github.io/claude-demo</span></p></div></div>
+          <div class="kong-step"><span class="kong-step-num">3</span><div class="kong-step-body"><h4>macOS + Ubuntu tabs</h4><p>skip any step you already have</p></div></div>
+          <div class="kong-step"><span class="kong-step-num">4</span><div class="kong-step-body"><h4>Covers</h4><p>install, git config, and gh + Claude login</p></div></div>
+        </div>
+        <img src="assets/prereqs-bot.png" alt="Clerk robot ticking off an instructions checklist" style="position:absolute; right:24px; bottom:40px; height:520px; z-index:1;" />
+        <aside class="notes">
+          <ul>
+            <li>ideally done before today; if not, run it now</li>
+            <li>[ASK] Who already has Claude Code working?</li>
+            <li>[ASK] Mac or Ubuntu?</li>
+          </ul>
+        </aside>
+      </section>
+
+      <!-- 4. INTRODUCTION (high-level: Claude Code + skills) -->
+      <section class="slide-content" data-background-color="#000000">
+        <div class="slide-header">
+          <span class="section-label">Introduction</span>
+          <h2>Claude Code, and <em>skills</em></h2>
+        </div>
+        <ul class="kong-bullets" style="max-width:58%;">
+          <li>Claude Code is an AI agent in your terminal: it reads, edits, runs, and ships real work</li>
+          <li>Today you steer it with one-off prompts</li>
+          <li>A skill turns a repeatable job into a reusable capability</li>
+          <li>Build once, install it, share it with the team</li>
+        </ul>
+        <img src="assets/intro-bot.png" alt="Robot holding a reusable-tool hologram" style="position:absolute; right:36px; bottom:118px; height:500px; z-index:1;" />
+        <aside class="notes">
+          <ul>
+            <li>describe Claude Code: agent in your terminal</li>
+            <li>prompts are throwaway</li>
+            <li>skills are reusable</li>
+            <li>what's in a skill: one SKILL.md, frontmatter (trigger) + body (steps)</li>
+            <li>ships in a plugin, from a marketplace</li>
+            <li>trigger wording decides when it fires</li>
+            <li>build once, share</li>
+            <li>[ASK] A task you've prompted Claude more than once this week?</li>
+          </ul>
+        </aside>
+      </section>
+
+      <!-- 5. DETERMINISTIC (authoring principle #1) -->
+      <section class="slide-content" data-background-color="#000000">
+        <div class="slide-header">
+          <span class="section-label">Principles</span>
+          <h2><em>Deterministic</em> by design</h2>
+        </div>
+        <div style="display:flex; gap:20px; align-items:stretch; max-width:66%;">
+          <div class="kong-card" style="flex:1;"><p>The model orchestrates. The tooling executes.</p></div>
+          <div class="kong-card" style="flex:1;"><p>Call real tools (gh, sf, validated APIs), not "Claude, write the API call"</p></div>
+          <div class="kong-card" style="flex:1;"><p>Same inputs, same result: testable and auditable</p></div>
+        </div>
+        <p style="margin-top:24px; font-size:0.5em; max-width:66%;"><a href="https://cuddly-adventure-1qg47ep.pages.github.io/contributing/principles/">Read the full authoring principles →</a></p>
+        <img src="assets/deterministic-bot.png" alt="Foreman robot with checklist and wrench" style="position:absolute; right:20px; bottom:42px; height:452px; z-index:1;" />
+        <aside class="notes">
+          <ul>
+            <li>[ASK] Does a general, free-text prompt make your work more reproducible? (let them answer)</li>
+            <li>no: different result each run</li>
+            <li>fix: move the exact part into tooling</li>
+            <li>model gathers, tooling acts</li>
+            <li>determinism in tooling, judgement in model</li>
+            <li>e.g. gh issue create, not "write the API call"</li>
+            <li>validate inputs: slack_search_channels, sf data query</li>
+            <li>payoff: testable + auditable</li>
+            <li>discuss: where would this remove guesswork?</li>
+          </ul>
+        </aside>
+      </section>
+
+      <!-- 6. CONCEPTS -->
+      <section class="slide-content" data-background-color="#000000">
+        <div class="slide-header">
+          <span class="section-label">Concepts</span>
+          <h2>What is a <em>skill</em></h2>
+        </div>
+        <div style="margin-left:44%; max-width:52%;">
+          <div style="display:flex; gap:18px; align-items:stretch; margin-bottom:22px;">
+            <div class="kong-card" style="flex:1;"><h3>Frontmatter</h3><p>says when to fire</p></div>
+            <div class="kong-card" style="flex:1;"><h3>Body</h3><p>says what to do</p></div>
+          </div>
+          <ul class="kong-bullets">
+            <li>A markdown file Claude Code reads when triggered</li>
+            <li>Ships inside a plugin, installed from a marketplace</li>
+            <li>Example: /kong-skill-init, scaffolds a new skill</li>
+          </ul>
+        </div>
+        <img src="assets/whatis-bot.png" alt="Robot loading a skill card into its skill bay" style="position:absolute; left:8px; bottom:0; height:548px; z-index:1;" />
+        <aside class="notes">
+          <ul>
+            <li>one SKILL.md; no DSL, no SDK</li>
+            <li>frontmatter = trigger; Claude decides relevance</li>
+            <li>body = the procedure, imperatives</li>
+            <li>plugins bundle skills; marketplaces serve plugins</li>
+            <li>[ASK] Who has installed something from /plugin? What?</li>
+            <li>point at kong-skill-init (we use it later)</li>
+          </ul>
+        </aside>
+      </section>
+
+      <!-- 7. SECURITY -->
+      <section class="slide-content" data-background-color="#000000">
+        <img src="kong-reveal-theme/assets/images/bg-network.png" alt="" aria-hidden="true" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.16; z-index:0;" />
+        <div class="slide-header" style="position:relative; z-index:1;">
+          <span class="section-label">Security</span>
+          <h2>Skills are <em>scanned</em> before they land</h2>
+        </div>
+        <ul class="kong-bullets" style="max-width:58%; position:relative; z-index:1;">
+          <li>Every plugin PR runs Cisco skill-scanner + Snyk agent-scan</li>
+          <li>Both target OWASP Agentic Skills Top 10</li>
+          <li>Branch protection: merge blocked until both pass + 1 review</li>
+          <li>Bypasses are admin-only and logged</li>
+          <li>Accepted risks render as warnings on the catalog page</li>
+        </ul>
+        <img src="assets/security-bot.png" alt="Quality-guard robot holding a checkmark" style="position:absolute; right:56px; top:50%; transform:translateY(-50%); height:470px; z-index:1;" />
+        <aside class="notes">
+          <ul>
+            <li>cold open: Instagram AI support, account takeover via prompt injection, no creds (thecybersecguru.com)</li>
+            <li>closer to home: jqwik supply-chain injection, hidden with ANSI escapes; Claude flagged it (arstechnica, 2026/05)</li>
+            <li>a skill is instructions an agent reads, so scan before install</li>
+            <li>two scanners, different DBs, redundant on purpose</li>
+            <li>OWASP Agentic Top 10; no self-merge; bypass logged</li>
+            <li>lethal trifecta: injection + network + filesystem</li>
+            <li>[ASK] Who would you trust to write the skills you install? This gate is the answer.</li>
+            <li>accepted findings show on the install page</li>
+          </ul>
+        </aside>
+      </section>
+
+      <!-- 8. DEMO DIVIDER (marketplace) -->
+      <section class="slide-divider" data-no-footer
+        data-background-image="kong-reveal-theme/assets/images/bg-hero-ring.png"
+        data-background-size="cover"
+        data-background-color="#000000">
+        <div class="divider-content">
+          <span class="section-label">Demo</span>
+          <h2>Let me show you the <em>marketplace.</em></h2>
+        </div>
+        <img src="assets/marketplace-bot.png" alt="Clanker Mart robot with a price tag" style="position:absolute; right:70px; top:50%; transform:translateY(-50%); height:380px; z-index:2;" />
+        <aside class="notes">
+          <ul>
+            <li>switch to the browser (~2 min)</li>
+            <li>path: landing, catalog, filter by tag, a skill page, Security, Contributing</li>
+            <li>[ASK] before clicking: first thing you'd want to see on a skill page?</li>
+          </ul>
+        </aside>
+      </section>
+
+      <!-- 9. DEMO DIVIDER (two skills) -->
+      <section class="slide-divider" data-no-footer
+        data-background-image="kong-reveal-theme/assets/images/bg-hero-ring.png"
+        data-background-size="cover"
+        data-background-color="#000000">
+        <div class="divider-content">
+          <span class="section-label">Demo</span>
+          <h2>Two skills <em>in action.</em></h2>
+        </div>
+        <img src="assets/demo-bots.png" alt="Two robots presenting their work" style="position:absolute; right:40px; bottom:48px; width:40%; z-index:2;" />
+        <aside class="notes">
+          <ul>
+            <li>do 2 skill demos (~2 min each)</li>
+            <li>1: feature-request, Slack thread to FR + proxy-vote</li>
+            <li>2: Slack MCP + kong-doc-build to cadence PPTX</li>
+            <li>open the source first</li>
+            <li>[ASK] Who has written the same FR three times for three customers?</li>
+            <li>[ASK] What artifact would you stop building by hand for cadence calls?</li>
+            <li>close: installable in 5 minutes</li>
+          </ul>
+        </aside>
+      </section>
+
+      <!-- 10. PIVOT TO HANDS-ON BUILD -->
+      <section class="slide-content" data-background-color="#000000">
+        <div class="slide-header">
+          <span class="section-label">Hands-on</span>
+          <h2>Now <em>you</em> build one</h2>
+        </div>
+        <ul class="kong-bullets" style="max-width:58%;">
+          <li>Pick a repetitive task you keep redoing</li>
+          <li>The 7-step chain makes it mechanical</li>
+          <li>Go small: tiny skills are the best skills</li>
+          <li>Goal: one PR landed before we wrap</li>
+        </ul>
+        <img src="assets/build-bot.png" alt="Construction robot stacking blocks" style="position:absolute; right:24px; bottom:60px; height:540px; z-index:1;" />
+        <aside class="notes">
+          <ul>
+            <li>pivot: talk done, now you build</li>
+            <li>pick a task you keep redoing</li>
+            <li>the chain makes it mechanical</li>
+            <li>go small; tiny skills win</li>
+            <li>goal: one PR landed</li>
+            <li>[ASK] What's the one task you're turning into a skill?</li>
+          </ul>
+        </aside>
+      </section>
+
+      <!-- 11. THANK YOU -->
+      <section class="slide-thankyou" data-no-footer data-background-color="#000000">
+        <div class="ty-top">
+          <h2 class="ty-headline">Thank you!</h2>
+          <div class="ty-cta">
+            <h3>Now go build a <em>skill.</em></h3>
+            <p class="subtitle">Questions, ideas, PRs? Let's talk</p>
+          </div>
+          <div class="ty-contact">
+            <p>Dustin Krysak<br>
+              <a href="mailto:dustin.krysak@konghq.com">dustin.krysak@konghq.com</a><br>
+              bashfulrobot.github.io/claude-demo</p>
+          </div>
+        </div>
+        <img src="assets/gorilla-bot.png" alt="Gorilla robot waving goodbye" style="position:absolute; right:48px; bottom:20px; height:520px; z-index:5;" />
+        <div class="ty-wordmark">
+          <span class="ty-wordmark-text">Kong</span>
+        </div>
+        <div class="kong-footer">
+          <img class="footer-mark" src="kong-reveal-theme/assets/images/kong-mark-footer.png" alt="Kong" />
+          <span class="footer-label">AI<br>CONNECTIVITY</span>
+          <span class="footer-copy">© Kong Inc.</span>
+          <span class="footer-right">NOT TO BE SHARED EXTERNALLY</span>
+        </div>
+        <aside class="notes">
+          <ul>
+            <li>closing; leave up for Q&amp;A</li>
+            <li>install one skill, ship one PR</li>
+            <li>demo site for prereqs and recap</li>
+            <li>mic drop: ~90% of this built on my phone via Claude Code</li>
+          </ul>
+        </aside>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/notes/notes.min.js"></script>
+  <script src="kong-reveal-theme/kong-footer-plugin.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      center: false,
+      width: 1280,
+      height: 720,
+      margin: 0,
+      transition: 'fade',
+      transitionSpeed: 'fast',
+      backgroundTransition: 'fade',
+
+      kong: {
+        markSrc:    'kong-reveal-theme/assets/images/kong-mark-footer.png',
+        copyright:  '© Kong Inc.',
+        footerCopy: 'NOT TO BE SHARED EXTERNALLY',
+      },
+
+      plugins: [ KongFooter, RevealNotes ],
+    });
+  </script>
+</body>
+</html>

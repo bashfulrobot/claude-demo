@@ -35,7 +35,7 @@ Draft the SKILL.md in imperative voice. Ask me about anything unclear before you
 That brief is just the [design principles](design.md) plus the good-prompt basics (context, a named output, and guardrails) written down.
 
 !!! example "Building a document skill from reference material"
-    When your skill should follow an established format, point `skill-creator` straight at the source articles and let it bake the best practices into the `SKILL.md`:
+    When your skill should follow an established format, you can skip the structured brief and point it straight at the source articles instead. Run `/kong-skill-author` and, when it asks what your skill does, give it this:
 
     ```text
     Using these three articles, define a skill that drafts a customer success
