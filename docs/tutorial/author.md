@@ -13,6 +13,9 @@ This loads Kong's conventions into context, then hands off to `skill-creator` to
 
 ## Give it a strong brief
 
+!!! tip "Keep the prompting cheatsheet open"
+    The brief is a prompt, and the [prompting tips and tricks](prompting.md) page is worth referencing while you write it. Ctrl+click (Cmd+click on macOS) the link to open it in a new tab so you can keep it beside this one.
+
 When it asks what your skill does, don't wing it. Paste a structured brief. This one prompt is the difference between a near-mergeable first draft and three rounds of rework. Below it's filled in with a `success-plan` sample. **Replace every line with your own skill's details**, and fill in the angle brackets:
 
 ```text
