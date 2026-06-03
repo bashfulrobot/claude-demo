@@ -211,3 +211,10 @@ button:focus-visible,
 .md-footer-meta__inner {
   flex-direction: row-reverse;
 }
+
+/* Bump body copy a touch above Material's default .8rem for easier reading,
+ * especially when projected during the workshop. Headings scale off this,
+ * so list, table, and admonition text grow proportionally. */
+.md-typeset {
+  font-size: 0.85rem;
+}
