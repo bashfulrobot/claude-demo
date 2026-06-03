@@ -44,6 +44,9 @@ python3 --version
 
 === "Ubuntu / Debian"
 
-    No default apt package. See [just.systems](https://just.systems/) for the prebuilt binary or install script.
+    ```bash
+    sudo apt update
+    sudo apt install just -y
+    ```
 
 Next: [Configure git](configure-git.md).
