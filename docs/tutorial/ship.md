@@ -5,7 +5,7 @@ hide:
 
 # 6. Ship it
 
-Three commands take you from "done editing" to "PR open."
+You're working from a fork, so you push your branch to **your fork** (`origin`) and open the PR against **Kong** (`upstream`). The `/kong-skill-open-pr` verb is built for the canonical Kong clone (it pushes to `origin` assuming that's Kong), so for the fork model you run these few steps by hand.
 
 ## Commit
 
@@ -15,26 +15,36 @@ Three commands take you from "done editing" to "PR open."
 
 A Conventional Commit, signed, no AI attribution. You installed this plugin on the [Install](install.md) page; if you skipped it, a plain `git commit -m "feat(<skill-name>): ..."` works just as well.
 
-## Open the PR
+## Push a branch to your fork
 
-```text
-/kong-skill-open-pr --apply
+Name the branch `<your-handle>-<skill-name>-skill` (the marketplace convention), then push it to your fork:
+
+```bash
+git checkout -b <your-handle>-<skill-name>-skill
+git push -u origin <your-handle>-<skill-name>-skill
 ```
 
-Creates the branch `<your-handle>-<skill-name>-skill`, pushes it, and opens the PR pre-filled with the team's quality-bar checklist.
-
 !!! example "Example"
-    For the running example, that branch is `bashfulrobot-success-plan-skill`, and the commit reads like `feat(success-plan): add customer success plan drafting skill`.
+    ```bash
+    git checkout -b bashfulrobot-success-plan-skill
+    git push -u origin bashfulrobot-success-plan-skill
+    ```
 
-!!! warning "Branch-name rule"
-    The verb refuses names that don't match `<handle>-<skill-name>-skill`. Editing a skill whose first PR already used that branch? Add a topic suffix, e.g. `bashfulrobot-success-plan-tweak-skill`.
+## Open the PR against Kong
+
+```bash
+gh pr create --repo Kong/kong-skills --base main \
+  --head <your-handle>:<your-handle>-<skill-name>-skill --web
+```
+
+`--repo Kong/kong-skills` targets the upstream repo, `--head <your-handle>:<branch>` points at the branch on your fork, and `--web` opens the browser so you can fill in the PR with Kong's template and the quality-bar checklist. Submit it there.
 
 ## Watch CI
 
-```text
-/kong-skill-watch-checks --watch
-```
+After the PR is open, the scanners (Cisco AI Defense, Snyk, risk-capture) run on it. Watch them on the PR page, or from the terminal with the PR number:
 
-Polls the scanners (Cisco AI Defense, Snyk, risk-capture) and prints a details URL for anything that fails. Run it only if a check flags.
+```bash
+gh pr checks <pr-number> --repo Kong/kong-skills
+```
 
 Next: [You're done](done.md)
