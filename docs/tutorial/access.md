@@ -5,7 +5,7 @@ hide:
 
 # Get access
 
-The marketplace lives in the **Kong/kong-skills** repo, and the docs site is private. You won't push to that repo directly; you'll fork it and open a pull request from your fork. You need two things in place first, or forking and cloning will fail.
+The marketplace lives in the **Kong/kong-skills** repo, and the docs site is private. You need two things in place first, or cloning and pushing will fail.
 
 ## 1. Log into GitHub (web)
 
@@ -13,13 +13,13 @@ Open [github.com](https://github.com) in your browser and sign in. Browser login
 
 ## 2. Authorise the GitHub CLI for Kong SSO
 
-You logged in over **HTTPS** with `gh auth login` during setup, so access runs through the GitHub CLI's token, not an SSH key. That token has to be SSO-authorized for the **Kong** org, or forking and cloning the private Kong repo are rejected.
+You logged in over **HTTPS** with `gh auth login` during setup, so access runs through the GitHub CLI's token, not an SSH key. That token has to be SSO-authorized for the **Kong** org, or `git clone` and `git push` against Kong repos are rejected.
 
 - Most of the time the `gh auth login` browser flow already prompted you to **Authorize** for the Kong organization. If you clicked through it, you're done.
 - If you're not sure, go to [github.com/settings/connections/applications](https://github.com/settings/connections/applications), open **GitHub CLI**, and under **Organization access** make sure **Kong** shows a green check (click **Authorize** / **Grant** if it doesn't).
 
-!!! info "You also need to be in the Kong org"
-    SSO authorization only works if you're already a member of the **Kong** GitHub organization. If you're not, ask the instructor to add you before going further.
+!!! warning "Write access to the repo, not just org membership"
+    These are two separate things. SSO authorization only works if you're a member of the **Kong** GitHub organization. On top of that, you need **write (push) access to `kong-skills`** so you can push your branch later; plain org membership doesn't grant it. A repo admin adds you to a team with write access or as a collaborator. If you're missing either, ask the instructor before going further.
 
 !!! check "Quick test"
     Once authorised, this site should open without a login wall:
