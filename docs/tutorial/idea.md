@@ -38,15 +38,7 @@ score) before it drafts.
 
 ## Pick your own, though
 
-Don't just run one of the samples above. The skill sticks when it automates something *you* keep doing. To find yours, paste this into a Claude Code session:
-
-```text
-I'm a Customer Success Manager at Kong. List 5 small, repetitive tasks in my
-week that a Claude Code skill could automate, especially documents I write
-again and again. For each, give the trigger, the input I'd paste, the data it
-needs, and the single artifact it produces, two lines each. Then pick the best
-first skill and tell me why.
-```
+Don't just run one of the samples above. The skill sticks when it automates something *you* keep doing. Think about the document or task you produce most often: the one you'd happily never format by hand again. That's your skill.
 
 Got it in a sentence? Good.
 
