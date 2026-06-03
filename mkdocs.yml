@@ -1,0 +1,71 @@
+site_name: Claude Code Workshop — Setup
+site_description: Step-by-step setup for the Claude Code Skills workshop
+site_url: https://bashfulrobot.github.io/claude-demo/
+repo_url: https://github.com/bashfulrobot/claude-demo
+repo_name: bashfulrobot/claude-demo
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  logo: assets/brand/Kong-Logomark.svg
+  favicon: assets/brand/Kong-Logomark.svg
+  font:
+    text: Funnel Sans
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: lime
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: lime
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/bashfulrobot/claude-demo
+      name: Source on GitHub
+
+copyright: "For the Claude Code Skills workshop"
+
+plugins:
+  - search
+  - awesome-pages
+
+extra_css:
+  - stylesheets/kong-brand.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - toc:
+      permalink: true
+
+# nav is controlled by docs/.pages via the awesome-pages plugin.

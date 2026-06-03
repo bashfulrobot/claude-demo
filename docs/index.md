@@ -1,0 +1,17 @@
+# Claude Code workshop — setup
+
+Everything you need installed and logged in before the workshop. Work top to bottom; each page has a **version check** at the top — if it already prints a version, skip that page.
+
+## What you'll set up
+
+- **Homebrew** — package manager (macOS only)
+- **git** — version control
+- **GitHub CLI (`gh`)** — talk to GitHub from the terminal
+- **Claude Code** — the agent you'll build skills with
+- **git config** — your identity and a few sensible defaults
+- **Logins** — GitHub and Claude Code
+
+!!! tip "In a hurry?"
+    Each page shows commands in **macOS** and **Ubuntu / Debian** tabs — pick yours. Prefer one command? See the one-shot scripts on [Next steps](next-steps.md).
+
+Start with [Homebrew](homebrew.md) (macOS) or jump to [git](git.md) on Ubuntu.

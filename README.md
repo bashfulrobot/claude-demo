@@ -1,15 +1,14 @@
 # claude-demo
 
 Setup for the **Claude Code Skills** workshop. Pick your platform and follow the
-copy/paste guide — every step has a version check, so skip anything you already have.
+step-by-step guide — every step has a version check, so skip anything you already have.
 
-## Setup guides
+## 📖 Setup guide
 
-- **macOS** → [macos.md](macos.md)
-- **Ubuntu / Debian** → [ubuntu.md](ubuntu.md)
+**→ https://bashfulrobot.github.io/claude-demo/**
 
-Each guide installs git, GitHub CLI (`gh`), and Claude Code (plus Homebrew on
-macOS), sets sensible git config, and walks you through `gh` and Claude Code login.
+A rendered, step-by-step site (macOS + Ubuntu tabs) covering: Homebrew, git,
+GitHub CLI, Claude Code, git config, and the GitHub + Claude logins.
 
 ## Prefer one command?
 
@@ -26,14 +25,16 @@ curl -fsSLO https://raw.githubusercontent.com/bashfulrobot/claude-demo/main/inst
 chmod +x install-ubuntu.sh && ./install-ubuntu.sh
 ```
 
-## Supplemental docs
+## Repo layout
 
-<!-- Add workshop-specific guides here as we write them. -->
+- `docs/` — the MkDocs setup guide (source for the site above)
+- `install-mac.sh`, `install-ubuntu.sh` — the one-shot scripts
+- `mkdocs.yml` — site config (Material theme, Kong palette)
+- `.github/workflows/docs.yml` — rebuilds + deploys the site on every push that touches `docs/`
 
-- _(coming soon)_
+## Build the docs locally
 
-External references:
-
-- [Claude Code docs](https://code.claude.com/docs/en/overview)
-- [GitHub CLI manual](https://cli.github.com/manual/)
-- [Homebrew](https://brew.sh/)
+```bash
+pip install -r requirements.txt
+mkdocs serve   # live preview at http://127.0.0.1:8000
+```

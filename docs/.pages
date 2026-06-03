@@ -1,0 +1,9 @@
+nav:
+  - index.md
+  - homebrew.md
+  - git.md
+  - github-cli.md
+  - claude-code.md
+  - configure-git.md
+  - logins.md
+  - next-steps.md
