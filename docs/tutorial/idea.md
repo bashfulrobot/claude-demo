@@ -7,25 +7,45 @@ hide:
 
 Decide what your skill *does* in one sentence before you scaffold. Keep it narrow: one trigger, one job, one named output.
 
-Need a seed? Pick one and make it yours, or invent your own:
+The best skill is something you already do by hand, over and over. Think about the documents and deliverables you produce on repeat: success plans, QBR outlines, onboarding checklists, renewal-risk summaries, call recaps. A skill that drafts one of those for you is a great first build.
 
-- A decK config export → a prioritized risk / best-practice review
-- A Kong version → an upgrade-readiness checklist (EOL, breaking changes)
-- A list of enabled plugins → a quick security and performance review
-- A support-case thread → a structured escalation summary
+## A worked sample
 
-!!! tip "Anything works"
-    Pick whatever sounds interesting. It's fine if your neighbour picks something similar; this is practice, not a competition. The seeds above are just starting points.
-
-## Stuck? Let Claude mine your week
-
-Paste this into a Claude Code session and let it find candidates from your own work:
+Skills are great at turning reference material plus your inputs into a consistent document. Here's a prompt that defines one which drafts a customer success plan from a few best-practice articles, then asks you for anything it still needs:
 
 ```text
-I'm a Kong CSM. List 5 small, repetitive tasks in my week that a Claude Code
-skill could automate. For each, give the trigger, the input I'd paste, the
-tool or data it needs, and the single artifact it produces, two lines each.
-Then pick the best first skill and tell me why.
+Using these three articles, define a skill that drafts a customer success plan
+following the tips and best practices they outline. The skill should prompt me
+for any recommended inputs I haven't already provided before it drafts. Then
+have it account for the key GEP metrics Kong tracks: <metric 1>, <metric 2>,
+<metric 3>.
+
+https://www.everafter.ai/blog/crafting-customer-success-plans-that-drive-action
+https://www.custify.com/blog/elements-customer-success-plan/
+https://www.dock.us/library/customer-success-plan
+```
+
+Swap `<metric 1>`, `<metric 2>`, `<metric 3>` for the GEP metrics you actually report on.
+
+Same shape works for plenty of other CS deliverables:
+
+```text
+Define a skill that turns my raw account notes into a quarterly business review
+outline: wins, open risks, adoption trends, and goals for next quarter. Have it
+ask me for anything missing (renewal date, key stakeholders, current health
+score) before it drafts.
+```
+
+## Pick your own, though
+
+Don't just run one of the samples above. The skill sticks when it automates something *you* keep doing. To find yours, paste this into a Claude Code session:
+
+```text
+I'm a Customer Success Manager at Kong. List 5 small, repetitive tasks in my
+week that a Claude Code skill could automate, especially documents I write
+again and again. For each, give the trigger, the input I'd paste, the data it
+needs, and the single artifact it produces, two lines each. Then pick the best
+first skill and tell me why.
 ```
 
 Got it in a sentence? Good.
